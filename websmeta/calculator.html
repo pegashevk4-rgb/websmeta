@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ВебСмета — калькулятор стоимости разработки сайта</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="card">
+
+    <a href="index.html" class="back-link">← На главную</a>
+
+    <div class="brand">
+      <div class="brand-mark">ВС</div>
+      <div class="brand-name">ВебСмета</div>
+    </div>
+
+    <h1>Калькулятор стоимости разработки сайта</h1>
+
+    <p class="subtitle">
+      Узнайте примерный бюджет и сроки проекта за минуту — заполните параметры ниже,
+      и мы сразу покажем предварительную оценку.
+    </p>
+
+    <!-- Тип сайта -->
+    <div class="form-group">
+      <label class="field-label" for="siteType">Тип сайта</label>
+      <select id="siteType">
+        <option value="landing">Лендинг</option>
+        <option value="corporate">Корпоративный сайт</option>
+        <option value="shop">Интернет-магазин</option>
+      </select>
+      <span class="hint">Чем сложнее тип сайта, тем выше базовая стоимость и срок разработки.</span>
+    </div>
+
+    <!-- Количество страниц -->
+    <div class="form-group">
+      <label class="field-label" for="pages">Количество страниц</label>
+      <input type="number" id="pages" min="1" value="1" />
+      <span class="hint">Каждая страница сверх первой добавляет к стоимости и сроку проекта.</span>
+    </div>
+
+    <!-- Дополнительные функции -->
+    <div class="form-group">
+      <label class="field-label">Дополнительные функции</label>
+
+      <div class="checkboxes">
+        <div class="checkbox-item">
+          <label>
+            <input type="checkbox" id="leadForm" name="leadForm" />
+            <span>Форма заявки</span>
+          </label>
+        </div>
+
+        <div class="checkbox-item">
+          <label>
+            <input type="checkbox" id="catalog" name="catalog" />
+            <span>Каталог</span>
+          </label>
+        </div>
+
+        <div class="checkbox-item">
+          <label>
+            <input type="checkbox" id="payment" name="payment" />
+            <span>Онлайн-оплата</span>
+          </label>
+        </div>
+
+        <div class="checkbox-item">
+          <label>
+            <input type="checkbox" id="crm" name="crm" />
+            <span>Интеграция с CRM</span>
+          </label>
+        </div>
+
+        <div class="checkbox-item">
+          <label>
+            <input type="checkbox" id="multilang" name="multilang" />
+            <span>Мультиязычность</span>
+          </label>
+        </div>
+      </div>
+
+      <span class="hint">Каждая выбранная функция увеличивает итоговый бюджет и срок реализации.</span>
+    </div>
+
+    <!-- Срочность проекта (сразу под дополнительными функциями) -->
+    <div class="form-group">
+      <label class="field-label" for="urgency">Срочность проекта</label>
+      <select id="urgency">
+        <option value="standard">Стандартные сроки</option>
+        <option value="fast">Быстрее обычного</option>
+        <option value="urgent">Очень срочно</option>
+      </select>
+      <span class="hint">Сжатые сроки сокращают время разработки, но увеличивают стоимость проекта.</span>
+    </div>
+
+    <!-- Кнопки (в самом низу формы) -->
+    <div class="actions">
+      <button id="resetBtn" type="button">Сбросить</button>
+      <button id="calculateBtn">Рассчитать</button>
+      <button id="contactBtn" type="button">Связаться</button>
+    </div>
+
+    <!-- Результат -->
+    <div id="result" class="result">
+      <div class="result-top">
+        <h2>Результат оценки</h2>
+        <span class="badge">Предварительная оценка</span>
+      </div>
+
+      <div class="result-grid">
+        <div class="result-cell">
+          <div class="result-eyebrow">Стоимость</div>
+          <div class="price-value" id="price"></div>
+        </div>
+        <div class="result-cell">
+          <div class="result-eyebrow">Срок</div>
+          <div class="timeline-value" id="timeline"></div>
+        </div>
+      </div>
+
+      <div class="explanation" id="explanation"></div>
+    </div>
+  </div>
+
+  <!-- Модальное окно «Связаться» -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" type="button">&times;</button>
+      <h2>Связаться с нами</h2>
+      <p class="modal-subtitle">Расскажите о вашем проекте — и мы свяжемся с вами для обсуждения деталей.</p>
+
+      <form id="modalContactForm" action="https://formspree.io/f/mkolenkg" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Создание сайта (из калькулятора)">
+
+        <div class="form-group">
+          <label for="modalName">Имя *</label>
+          <input type="text" id="modalName" name="name" placeholder="Как к вам обращаться" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modalEmail">E-mail</label>
+          <input type="email" id="modalEmail" name="email" placeholder="example@mail.ru">
+        </div>
+
+        <div class="form-group">
+          <label for="modalPhone">Телефон</label>
+          <input type="tel" id="modalPhone" name="phone" placeholder="+7 (___) ___-__-__">
+        </div>
+
+        <div class="form-group">
+          <label for="modalComment">Описание проекта</label>
+          <textarea id="modalComment" name="comment" placeholder="Расскажите о вашем проекте: задачи, сроки, пожелания..."></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="modal-submit">Отправить</button>
+          <button type="button" class="modal-close" id="modalCloseBtnBottom">Закрыть</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

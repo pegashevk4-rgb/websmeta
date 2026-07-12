@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ВебСмета — разработка сайтов с прозрачной сметой</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ВС</div>
+        <div class="brand-name">ВебСмета</div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">Обо мне</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#request" class="nav-cta">Оставить заявку</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Веб-студия</span>
+        <h1>Сайт по понятной цене — без сюрпризов в смете</h1>
+        <p class="hero-sub">
+          Делаем лендинги, корпоративные сайты и интернет-магазины с прозрачным бюджетом
+          на каждом этапе. Прежде чем обсуждать проект, вы уже знаете порядок цифр.
+        </p>
+        <div class="hero-actions">
+          <a href="calculator.html" class="btn-primary">Рассчитать стоимость сайта →</a>
+          <a href="#why" class="btn-ghost-link">Почему мы</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><strong>от 50 000 ₽</strong>стартовая стоимость</div>
+          <div class="stat"><strong>от 10 дней</strong>минимальный срок</div>
+          <div class="stat"><strong>3 типа сайтов</strong>лендинг, корпсайт, магазин</div>
+        </div>
+      </div>
+
+      <div class="preview">
+        <div class="preview-top">
+          <h3>Пример расчёта</h3>
+          <span class="preview-badge">Предварительно</span>
+        </div>
+        <div class="preview-grid">
+          <div class="preview-cell">
+            <div class="preview-eyebrow">Стоимость</div>
+            <div class="pv-price">120 000 ₽</div>
+          </div>
+          <div class="preview-cell">
+            <div class="preview-eyebrow">Срок</div>
+            <div class="pv-days">20 дней</div>
+          </div>
+        </div>
+        <p class="preview-note">Корпоративный сайт, 5 страниц, форма заявки. Ваш расчёт займёт меньше минуты.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="on-paper" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Обо мне</h2>
+      </div>
+      <p class="about-text">
+        Я занимаюсь разработкой сайтов — от лендингов и корпоративных порталов до полноценных интернет-магазинов.
+        Каждый проект выполняется с прозрачной сметой и понятными сроками: вы всегда знаете,
+        за что платите и когда получите результат. Подхожу к делу честно и ответственно —
+        чтобы ваш сайт работал на бизнес, а не создавал лишние вопросы.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= AUDIENCE ================= -->
+  <section class="on-card" id="audience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Кому подходят наши услуги</h2>
+        <p>Работаем с проектами разного масштаба — от первого сайта компании до полноценного интернет-магазина.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="info-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c2.5 2 4 5.5 4 9 0 2-.5 4-1.5 6h-5C8.5 15.5 8 13.5 8 11.5c0-3.5 1.5-7 4-9z"/><path d="M9 17.5l-2 3M15 17.5l2 3"/><circle cx="12" cy="10" r="1.6"/></svg>
+          </div>
+          <h3>Стартапам и небольшому бизнесу</h3>
+          <p>Нужен лендинг или сайт-визитка, чтобы быстро выйти на рынок и начать принимать заявки.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>
+          </div>
+          <h3>Растущим компаниям</h3>
+          <p>Нужен корпоративный сайт с разделами об услугах, команде и новостях, который растёт вместе с бизнесом.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.4 11.5a2 2 0 0 0 2 1.5h7.7a2 2 0 0 0 2-1.6L21 8H6"/></svg>
+          </div>
+          <h3>Интернет-магазинам</h3>
+          <p>Нужен каталог товаров, онлайн-оплата и интеграция с CRM для обработки заказов.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </div>
+          <h3>Проектам с жёстким дедлайном</h3>
+          <p>Нужно запустить сайт в сжатые сроки — мы перестраиваем темп работы под ваш график.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY US ================= -->
+  <section class="on-paper" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Почему выбирают ВебСмета</h2>
+        <p>Мы убрали из процесса то, что обычно вызывает больше всего вопросов: непрозрачные цены и расплывчатые сроки.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="info-card why-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
+          </div>
+          <h3>Прозрачная смета</h3>
+          <p>Вы заранее видите, из чего складывается стоимость: тип сайта, страницы, функции и сроки.</p>
+        </div>
+
+        <div class="info-card why-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 1 1-3.3-6.5"/><path d="M21 4v5h-5"/></svg>
+          </div>
+          <h3>Расчёт без долгих переговоров</h3>
+          <p>Предварительный бюджет — за минуту в калькуляторе. Финальная смета — после короткого звонка.</p>
+        </div>
+
+        <div class="info-card why-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          </div>
+          <h3>Гибкие сроки</h3>
+          <p>Стандартный темп, ускоренный или очень срочный — вы выбираете баланс между ценой и скоростью.</p>
+        </div>
+
+        <div class="info-card why-card">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-2.2-7-5.8-7-10V6l7-3 7 3v5c0 4.2-2.5 7.8-7 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Поддержка после запуска</h3>
+          <p>Сопровождаем сайт после старта и помогаем вносить правки, когда они нужны.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTFOLIO ================= -->
+  <section class="on-card" id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Портфолио</h2>
+        <p>Примеры выполненных проектов — от лендингов до интернет-магазинов.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-thumb">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          </div>
+          <div class="portfolio-body">
+            <h3>Лендинг для IT-стартапа</h3>
+            <p>Одностраничный сайт с формой захвата и анимациями. Результат: рост заявок на 40% за первый месяц после запуска.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #E3F1EE 0%, #E9EEF6 100%);">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01M15 11h.01"/></svg>
+          </div>
+          <div class="portfolio-body">
+            <h3>Корпоративный сайт строительной компании</h3>
+            <p>Многостраничный сайт с каталогом услуг, галереей работ и формой обратной связи. Увеличение обращений в 2.5 раза.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #F4F8F7 0%, #E3F1EE 100%);">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.4 11.5a2 2 0 0 0 2 1.5h7.7a2 2 0 0 0 2-1.6L21 8H6"/></svg>
+          </div>
+          <div class="portfolio-body">
+            <h3>Интернет-магазин одежды</h3>
+            <p>Полноценный e-commerce с каталогом, корзиной, онлайн-оплатой и интеграцией с CRM. Оборот вырос на 60% за квартал.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="on-card" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Как мы работаем</h2>
+        <p>От первой цифры в калькуляторе до запущенного сайта — четыре простых шага.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <h3>Считаете бюджет</h3>
+          <p>Заполняете параметры проекта в калькуляторе и получаете предварительную оценку.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <h3>Обсуждаем детали</h3>
+          <p>Коротко созваниваемся, уточняем задачи и пожелания по сайту.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <h3>Согласуем смету</h3>
+          <p>Фиксируем итоговую стоимость и сроки — без скрытых доплат в процессе.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">4</div>
+          <h3>Разрабатываем и запускаем</h3>
+          <p>Делаем сайт и сопровождаем запуск, держим вас в курсе на каждом этапе.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TARIFFS ================= -->
+  <section class="on-paper" id="tariffs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Тарифы</h2>
+        <p>Честные цены без скрытых доплат. Выберите подходящий тариф и начните проект.</p>
+      </div>
+
+      <div class="tariffs-grid">
+        <div class="tariff-card">
+          <h3>Лендинг</h3>
+          <div class="tariff-price">от 50 000 ₽</div>
+          <p>Одностраничный сайт для запуска продаж или сбора заявок. Включает адаптивный дизайн, форму обратной связи и базовую SEO-настройку.</p>
+          <a href="#request" class="tariff-btn">Оставить заявку</a>
+        </div>
+
+        <div class="tariff-card featured">
+          <h3>Корпоративный сайт</h3>
+          <div class="tariff-price">от 120 000 ₽</div>
+          <p>Многостраничный сайт для компании с разделами об услугах, команде и новостях. Идеально подходит для растущего бизнеса.</p>
+          <a href="#request" class="tariff-btn">Оставить заявку</a>
+        </div>
+
+        <div class="tariff-card">
+          <h3>Интернет-магазин</h3>
+          <div class="tariff-price">от 200 000 ₽</div>
+          <p>Полноценный e-commerce с каталогом товаров, корзиной, онлайн-оплатой и интеграцией с CRM для обработки заказов.</p>
+          <a href="#request" class="tariff-btn">Оставить заявку</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REQUEST FORM ================= -->
+  <section id="request">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Оставить заявку</h2>
+        <p>Расскажите о вашем проекте — и я свяжусь с вами для обсуждения деталей.</p>
+      </div>
+
+      <div class="request-form" id="requestForm">
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/mkolenkg"
+          method="POST"
+          novalidate
+        >
+          <!-- Тема письма -->
+          <input type="hidden" name="_subject" value="Создание сайта">
+
+          <div class="form-group">
+            <label for="reqName">Имя *</label>
+            <input
+              type="text"
+              id="reqName"
+              name="name"
+              placeholder="Как к вам обращаться"
+              required
+            />
+            <div class="error-msg" id="nameError">Пожалуйста, введите имя</div>
+          </div>
+
+          <div class="form-group">
+            <label for="reqEmail">E-mail</label>
+            <input
+              type="email"
+              id="reqEmail"
+              name="email"
+              placeholder="example@mail.ru"
+            />
+            <div class="error-msg" id="emailError">Введите корректный e-mail</div>
+          </div>
+
+          <div class="form-group">
+            <label for="reqPhone">Телефон</label>
+            <input
+              type="tel"
+              id="reqPhone"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reqComment">Описание проекта</label>
+            <textarea
+              id="reqComment"
+              name="comment"
+              placeholder="Расскажите о вашем проекте: задачи, сроки, пожелания..."
+            ></textarea>
+          </div>
+
+          <div class="error-msg" id="contactError" style="margin-bottom: 16px;">
+            Укажите имя и хотя бы один способ связи (e-mail или телефон)
+          </div>
+
+          <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+
+
+        <div class="form-success" id="formSuccess">
+          <h3>Заявка отправлена!</h3>
+          <p>Спасибо за обращение. Я свяжусь с вами в ближайшее время для обсуждения деталей проекта.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= --->
+  <section>
+    <div class="final-cta">
+      <h2>Готовы узнать стоимость своего сайта?</h2>
+      <p>Заполните несколько параметров проекта — и сразу получите предварительный бюджет и сроки.</p>
+      <a href="calculator.html" class="btn-on-accent">Перейти к калькулятору →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">
+      <div class="brand-mark">ВС</div>
+      <div class="brand-name">ВебСмета</div>
+    </div>
+    <p class="copy">© 2026 ВебСмета. Разработка сайтов с прозрачной сметой.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
