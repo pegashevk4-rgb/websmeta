@@ -1,15 +1,14 @@
 :root {
-      --bg: #E9EEF6;
-      --card: #FFFFFF;
-      --paper: #F4F8F7;
-      --ink: #16213A;
-      --muted: #6B7385;
-      --line: #DCE3ED;
-      --accent: #106B5C;
-      --accent-dark: #0B4F44;
-      --accent-soft: #E3F1EE;
-      --radius: 16px;
-    }
+  --bg: #E9EEF6;
+  --card: #FFFFFF;
+  --paper: #F4F8F7;
+  --ink: #16213A;    /* основной почти чёрный */
+  --muted: #1e222b;  /* сделаем ещё темнее и контрастнее */
+  --line: #DCE3ED;
+  --accent: #106B5C;
+  --accent-dark: #0B4F44;
+  --accent-soft: #E3F1EE;
+}
 
     * {
       box-sizing: border-box;
@@ -170,7 +169,7 @@
     .hero-sub {
       font-size: 16.5px;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 28px;
       max-width: 480px;
     }
@@ -359,7 +358,7 @@
     .section-head p {
       color: var(--muted);
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .on-card { background: var(--card); }
@@ -656,32 +655,15 @@
         padding: 0 16px;
       }
 
-      /* --- Nav --- */
+      /* ==================== NAV ==================== */
       .nav {
         padding: 16px 0;
         position: relative;
       }
 
-      .brand-name {
-        font-size: 16px;
-      }
-
-      .brand-mark {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-        border-radius: 8px;
-      }
-
-      .nav-cta {
-        font-size: 13px;
-        padding: 10px 14px;
-        background: var(--accent);
-        color: #fff;
-      }
-
       .nav-toggle {
         display: block;
+        flex-shrink: 0;
       }
 
       .nav-links {
@@ -693,9 +675,9 @@
         background: var(--card);
         flex-direction: column;
         gap: 0;
-        padding: 8px 16px 14px;
+        padding: 8px 16px 16px;
         border-bottom: 1px solid var(--line);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         z-index: 10;
       }
 
@@ -704,49 +686,56 @@
       }
 
       .nav-links a {
-        padding: 12px 0;
+        padding: 14px 0;
         font-size: 15px;
+        font-weight: 600;
         border-bottom: 1px solid var(--line);
       }
 
       .nav-links a:last-child {
         border-bottom: none;
-        margin-top: 6px;
+        margin-top: 14px;
         text-align: center;
-        padding: 12px 0;
+        padding: 14px 0;
+        background: var(--accent);
+        color: #fff !important;
+        border-radius: 10px;
+        font-weight: 700;
       }
 
-      /* --- Hero --- */
+      /* ==================== HERO ==================== */
       .hero {
-        padding: 32px 0 48px;
+        padding: 40px 0 56px;
       }
 
       h1 {
-        font-size: 26px;
-        line-height: 1.2;
+        font-size: 27px;
+        line-height: 1.25;
+        margin-bottom: 20px;
       }
 
       .eyebrow {
         font-size: 11.5px;
         padding: 5px 10px;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
       }
 
       .hero-sub {
-        font-size: 14.5px;
-        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 28px;
       }
 
       .hero-actions {
         flex-direction: column;
         align-items: stretch;
         gap: 12px;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
       }
 
       .btn-primary {
         text-align: center;
-        padding: 14px 20px;
+        padding: 15px 20px;
         font-size: 15px;
       }
 
@@ -757,11 +746,12 @@
 
       .stat-row {
         flex-direction: column;
-        gap: 14px;
+        gap: 18px;
+        margin-bottom: 32px;
       }
 
       .stat {
-        font-size: 13px;
+        font-size: 13.5px;
       }
 
       .stat strong {
@@ -808,204 +798,210 @@
         font-size: 17px;
       }
 
-      /* --- Sections --- */
+      /* ==================== SECTIONS ==================== */
       section {
-        padding: 40px 0;
+        padding: 48px 0;
       }
 
       .section-head {
-        margin-bottom: 28px;
+        margin-bottom: 32px;
       }
 
       .section-head h2 {
         font-size: 22px;
+        line-height: 1.3;
       }
 
       .section-head p {
-        font-size: 14px;
-      }
-
-      /* --- About --- */
-      .about-text {
         font-size: 14.5px;
-        line-height: 1.65;
+        line-height: 1.7;
       }
 
-      /* --- Grids (single column) --- */
+      /* ==================== ABOUT ==================== */
+      .about-text {
+        font-size: 15px;
+        line-height: 1.75;
+        padding: 8px 0;
+      }
+
+      /* ==================== GRIDS: single column ==================== */
       .grid-4,
-      .process-grid,
-      .portfolio-grid,
-      .tariffs-grid {
+      .process-grid {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 16px;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+      }
+
+      .tariffs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
       }
 
       /* --- Info cards --- */
       .info-card {
-        padding: 18px 16px;
+        padding: 20px 18px;
       }
 
       .info-card h3 {
-        font-size: 14.5px;
+        font-size: 15px;
+        line-height: 1.35;
       }
 
       .info-card p {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.7;
       }
 
       .icon-wrap {
-        width: 38px;
-        height: 38px;
-        border-radius: 9px;
-        margin-bottom: 12px;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-bottom: 14px;
       }
 
       /* --- Process --- */
       .process-step {
-        padding: 20px 14px 14px;
+        padding: 22px 16px 16px;
       }
 
       .process-step h3 {
-        font-size: 14px;
+        font-size: 14.5px;
       }
 
       .process-step p {
-        font-size: 12.5px;
+        font-size: 13.5px;
+        line-height: 1.55;
       }
 
       .process-num {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         font-size: 13px;
-        top: -14px;
+        top: -15px;
       }
 
-      /* --- Portfolio --- */
+      /* ==================== PORTFOLIO ==================== */
       .portfolio-thumb {
-        height: 140px;
+        height: 160px;
       }
 
       .portfolio-body {
-        padding: 16px 14px 18px;
+        padding: 20px 18px 22px;
       }
 
       .portfolio-body h3 {
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 1.35;
       }
 
       .portfolio-body p {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.7;
       }
 
-      /* --- Tariffs (2+1 layout) --- */
-      .tariffs-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
+      /* ==================== TARIFFS ==================== */
       .tariff-card {
-        padding: 20px 14px 18px;
+        padding: 26px 20px 24px;
         width: 100%;
       }
 
-      .tariff-card:last-child {
-        grid-column: 1 / -1;
-        max-width: 50%;
-        justify-self: center;
-      }
-
       .tariff-card h3 {
-        font-size: 15px;
+        font-size: 17px;
+        line-height: 1.3;
       }
 
       .tariff-card .tariff-price {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 24px;
+        margin-bottom: 14px;
       }
 
       .tariff-card p {
-        font-size: 12.5px;
-        margin-bottom: 16px;
-        line-height: 1.5;
+        font-size: 14.5px;
+        line-height: 1.7;
+        margin-bottom: 20px;
       }
 
       .tariff-btn {
         width: 100%;
         text-align: center;
-        padding: 12px 16px;
-        font-size: 13.5px;
+        padding: 14px 16px;
+        font-size: 15px;
       }
 
-      /* --- Request form --- */
+      /* ==================== REQUEST FORM ==================== */
       .request-form {
         max-width: none;
-        padding: 22px 16px;
+        padding: 24px 18px;
         border-radius: 14px;
       }
 
       .request-form label {
-        font-size: 13.5px;
+        font-size: 14px;
       }
 
       .request-form input,
       .request-form textarea {
-        padding: 11px 12px;
+        padding: 12px 14px;
         font-size: 15px;
       }
 
       .request-form textarea {
-        min-height: 90px;
+        min-height: 96px;
       }
 
       .request-form .submit-btn {
-        padding: 14px;
+        padding: 15px;
         font-size: 15px;
       }
 
-      /* --- Final CTA --- */
+      /* ==================== FINAL CTA ==================== */
       .final-cta {
-        padding: 32px 18px;
+        padding: 40px 20px;
         margin: 0 10px;
         border-radius: 18px;
       }
 
       .final-cta h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 21px;
+        margin-bottom: 12px;
       }
 
       .final-cta p {
-        font-size: 14px;
-        margin-bottom: 20px;
+        font-size: 14.5px;
+        margin-bottom: 22px;
       }
 
       .btn-on-accent {
-        padding: 13px 22px;
-        font-size: 14.5px;
+        padding: 14px 24px;
+        font-size: 15px;
       }
 
-      /* --- Footer --- */
+      /* ==================== FOOTER ==================== */
       footer {
-        padding: 24px 0 32px;
+        padding: 28px 0 36px;
       }
 
       .footer-brand {
-        margin-bottom: 6px;
+        margin-bottom: 8px;
       }
 
       .footer-brand .brand-mark {
-        width: 22px;
-        height: 22px;
-        font-size: 9.5px;
-        border-radius: 6px;
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+        border-radius: 7px;
       }
 
       .footer-brand .brand-name {
-        font-size: 14px;
+        font-size: 15px;
       }
 
       footer .copy {
-        font-size: 12px;
+        font-size: 12.5px;
       }
     }
 
@@ -1015,7 +1011,7 @@
       margin: 0 auto;
       text-align: center;
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: var(--muted);
     }
 
@@ -1064,7 +1060,7 @@
     .portfolio-body p {
       font-size: 13.5px;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.7;
     }
 
     /* ---------- Tariffs ---------- */
@@ -1110,7 +1106,7 @@
     .tariff-card p {
       font-size: 14px;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.7;
       margin-bottom: 22px;
     }
 
